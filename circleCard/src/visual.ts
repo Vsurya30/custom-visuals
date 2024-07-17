@@ -70,7 +70,7 @@ export class Visual implements IVisual {
         this.svg.attr("height", height);
         let radius: number = Math.min(width, height) / 2.2;
         
-        this.visualSettings = this.formattingSettingsService.populateFormattingSettingsModel(VisualSettings, options.dataViews);
+        this.visualSettings = this.formattingSettingsService.populateFormattingSettingsModel(VisualSettings, dataView);
         this.visualSettings.circle.circleThickness.value = Math.max(0, this.visualSettings.circle.circleThickness.value);
         this.visualSettings.circle.circleThickness.value = Math.min(10, this.visualSettings.circle.circleThickness.value);
         
